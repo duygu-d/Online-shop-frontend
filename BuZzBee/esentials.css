@@ -1,0 +1,786 @@
+:root{
+    --after-content:"0";
+}
+
+.header-txt-color{
+     color:#343434;
+}
+
+.p-txt-color{
+      color:#606060;
+}
+
+.icon-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+    background: rgb(252,248,224);
+    background: radial-gradient(circle, rgba(252,248,224,1) 25%, rgb(252, 188, 92) 100%);
+    filter: drop-shadow(1px 3px 1px #5e5e5e93);
+}
+
+.icon-circle i{
+    color: #372c22;
+}
+
+body{
+    margin:0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #efeeee;
+}
+body h1{
+    margin-top: 0px;
+}
+
+/*******************H E A D E R************************/
+header i:not(#except){
+    cursor: pointer;
+    font-size:20px;
+    background: linear-gradient(to right, #fa4a0f, #fcab14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 2px;
+}
+
+.header-items-container{
+    height: 80px;
+    background: -webkit-linear-gradient(165deg, rgb(247, 213, 171) 0%, rgba(251, 168, 25, 0.777) 65%), url("images/footer/1195098-pattern-photos-honeycomb-free-transparent-image-hd.png");
+    background: linear-gradient(165deg, rgba(255,247,237,1) 0%, rgba(251, 168, 25, 0.777) 65%), url("images/footer/1195098-pattern-photos-honeycomb-free-transparent-image-hd.png"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    filter: none;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 777;
+    align-items: flex-start;
+}
+
+.header-col-logo{
+    align-self: center;
+    z-index: 888;
+}
+
+.buzzbee-logo{
+    z-index: 999;
+    height: 120px;
+    width: 125px;
+    padding:10px 0 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-shadow:not(.sidebar){
+    background-color: #ffffffb3;
+    border-radius: 0px 0px 7px 7px;
+    width: 100%;
+    height: 55px;
+    filter: drop-shadow(1px 3px 5px #4c4c4c93);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.non-empty::after {
+    content: var(--after-content);
+    position: absolute;
+    top: 6.5px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    height: 17px;
+    width: 17px;
+    background-color: #f91c1c;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    z-index: 2;
+  }
+
+  .header-col-icons .header-col-icons i {
+    position: relative;
+    z-index: 1;
+  }
+
+.sticky {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.header-i-search .header-col-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.header-shadow .header-col-menu i{
+    font-size: 27px;
+    margin-left: 35px;
+}
+
+.header-shadow .header-col-icons i:last-of-type{
+    margin-right: 35px;
+}
+/*******************H E A D E R************************/
+
+
+
+/*******************FANCY TEXT FONT************************/
+.fancy-text{
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 0px;
+    font-size: 35px;
+    --bg-size: 400%;
+  --color-one: hsl(15 90% 55%);
+  --color-two: hsl(40 95% 55%);
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 8s infinite linear;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
+/*******************FANCY TEXT FONT************************/
+
+
+
+/************** BUTTON DESIGN ****************/
+.product-categories-btn {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    margin-top: 5px;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 540;
+    text-shadow: 2px 4px 10px rgba(50, 49, 49, 0.682);
+    justify-content: center;
+    line-height: 24px;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 15px 20px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .product-categories-btn {
+      padding: 19px 32px;
+    }
+  }
+  
+  .product-categories-btn:before,
+  .product-categories-btn:after {
+    border-radius: 80px;
+  }
+  
+  .product-categories-btn:before {
+    background-color: rgba(250, 135, 53, 0.32);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  .product-categories-btn:after {
+    background-color: initial;
+    background-image: linear-gradient(92.83deg, #fddbb3 0, #f7a922bb 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+  }
+  
+  .product-categories-btn:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+  }
+  
+  .product-categories-btn:active:not(:disabled) {
+    color: #ccc;
+  }
+  
+  .product-categories-btn:active:not(:disabled):after {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #fddbb3 0, #f7a923bb 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+  }
+  
+  .product-categories-btn:disabled {
+    cursor: default;
+    opacity: .24;
+  }
+/************** BUTTON DESIGN ****************/
+
+/*************NAV SEARCH******************/
+.nav-search-row {
+    display: flex;
+    align-items: center;
+    }
+    
+    .nav-search {
+        display: none;
+        padding-right: 20px;
+    }
+    
+    .nav-search input{
+        flex:1;
+        height:30px;
+        width: 150px;
+        background: transparent;
+        mix-blend-mode:luminosity;
+        box-shadow: 0px 4px 4px rgba(79, 78, 78, 0.2);
+        border-radius: 50px 0 0 50px;
+        border: 0.5px groove #b2b2b260;
+        size-adjust: 20px;
+        padding-left: 40px;
+        padding-right: 15px;
+        padding-top: 0px;
+    
+        text-align:center;
+    }
+     .search:focus {
+        outline: none;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    .restoredText{
+        color: #84756c;
+    }
+    .nav-search button{
+        border: none;
+        width: 35px;
+        height: 33px;
+        box-shadow: 0px 4px 4px rgba(79, 78, 78, 0.2);
+        border: 0.5px groove rgba(255, 166, 0, 0.207);
+        border-radius: 0 50px 50px 0;
+        padding-top: 1px;
+        padding-bottom: 0px;
+        background-image: linear-gradient(92.83deg, #fddbb3 0, #f7a922bb 100%);
+        cursor:pointer;
+    }
+    
+    .nav-search .fa-xmark{
+        padding-bottom: none;
+        color: #FFFFFF;
+        border-color: 1px;
+    }
+/*************NAV SEARCH*****************/
+
+/************** F O O T E R ****************/
+footer{
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      bottom: 0;
+      background: -webkit-linear-gradient(165deg, rgba(255,247,237,1) 0%, rgba(251, 168, 25, 0.777) 65%), url("images/footer/1195098-pattern-photos-honeycomb-free-transparent-image-hd.png");
+      background: linear-gradient(165deg, rgba(255,247,237,1) 0%, rgba(251, 168, 25, 0.777) 65%), url("images/footer/1195098-pattern-photos-honeycomb-free-transparent-image-hd.png"); 
+      background-size: cover;
+      background-position: center;
+      color:#fff;
+      padding: 100px 0 30px;
+      border-top-left-radius: 125px;
+      font-size: 13px;
+      line-height: 20px;
+      filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.232));
+  }
+  
+  .footer-row{
+      width: 85%;
+      margin:auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 100px;
+  }
+  
+  .footer-col{
+      flex-basis: 23%;
+      padding: 10px;
+  }
+  
+  #img{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      filter:drop-shadow(7px 7px 8px rgba(255, 238, 182, 0.741));
+  }
+  
+  .footer-col:nth-child(2),.footer-col:nth-child(3){
+  flex-basis: 15%;
+  }
+  
+  .footer-col .buzzbee-logo{
+      padding-top:50px;
+  }
+  
+  .footer-col h3{
+      width:fit-content;
+      margin-bottom: 40px;
+      position: relative;
+  }
+  
+  .remail-id{
+      width: fit-content;
+      border-bottom: 1px solid #ccc;
+      margin: 20px, 0;
+  }
+  
+  .footer-col ul li{
+      list-style: none;
+      margin-bottom: 12px;
+      padding-left: 0px;
+  }
+  
+  .footer-col ul{
+      padding-left: 0px;
+  }
+  
+  .footer-col ul li a{
+      text-decoration: none;
+      color:#fff;
+  }
+  
+  .footer-col ul li a:hover{
+      color: #928876;
+   }
+  
+   .footer-col ul li a:active{
+      color:#4b433f;
+  }
+  
+  .newsletter-form{
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 50px;
+  }
+  
+  .newsletter-form .fa-envelope{
+      font-size: 18px;
+      margin-right: 10px;
+  }
+  
+  .newsletter-form input{
+      flex-grow: 1;
+      background: transparent;
+      color: #ccc;
+      border: 0;
+      outline: none;
+  }
+  
+  .newsletter-form button{
+      background: transparent;
+      border:0;
+      outline: none;
+      cursor: pointer;
+  }
+  
+  .newsletter-form button .fa-arrow-right{
+      font-size: 16px;
+      color: #ffffff;
+  }
+  
+  .social-icons .fa-brands {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color: #59391b;
+      background: #fff;
+      margin-right: 15px;
+      cursor: pointer;
+      filter: drop-shadow(0px 4px 4px rgba(42, 42, 42, 0.25));
+  }
+  
+  .social-icons .fa-brands:hover{
+      background: #f1f1f1;
+   }
+  
+   .social-icons .fa-brands:active{
+      background:#e3e3e3;
+  }
+  
+  footer hr{
+      width: 90%;
+      border:0;
+      border-bottom: 1px solid #ccc;
+      margin: 20px auto;
+  }
+  
+  .copyright{
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 0px;
+  }
+  /************** F O O T E R ****************/
+
+  .products-container{
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+  }
+
+/*****************S I D E   N A V ***********************/
+    .sidebar{
+    display: none;
+    position: absolute;
+    flex: 0 0 auto;
+    width: 35%;
+    max-width: 300px;
+    padding: 2rem 1rem;
+    background-color: #dadada;
+    z-index: 2;
+    height:100%;
+    box-shadow: 10px 0px 6px -6px rgba(77, 77, 77, 0.5);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.header-container .fa-xmark{
+    color:#5d6175;
+    cursor: pointer;
+}
+
+.sidebar h3{
+color:#707793;
+font-size: 0.75rem;
+text-transform: uppercase;
+margin-bottom: 0.5em;
+}
+
+.sidebar .menu{
+    margin: 0 -1rem;
+}
+
+.sidebar .menu .menu-item, .sidebar .menu .menu-products{
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    transition: 0.2s linear;
+    background: linear-gradient(270deg, rgba(251,187,69,1) 62%, rgba(250,74,15,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.sidebar .menu .menu-item.is-active{
+    background:#ffffff;
+    filter:drop-shadow( 2px 2px 1px rgb(75, 75, 75));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+    border-right: 5px solid;
+    border-image: linear-gradient(to bottom, rgb(251, 74, 15), rgb(252, 171, 20)) 1;
+    border-image-slice: 1;
+    padding-left: 20px;
+}
+
+.sidebar .menu .menu-item:hover{
+    background:#fdf894;
+    filter:drop-shadow( 2px 2px 1px rgb(75, 75, 75));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+    padding-left: 25px;
+}
+
+.sublist-hide{
+    display: none;
+}
+
+.sublist-visible{
+    display: block;
+    list-style-type: none;
+}
+
+.whole-cart-window{
+    position: absolute;
+    z-index: 999;
+    align-self: flex-end;
+    background-color: #f6f6f6;
+    padding-bottom: 10px;
+    margin-right: 15px;
+    border-radius: 0 0 5% 5%;
+    width: 30%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    max-height: 470px;
+    overflow-y: scroll;
+}
+
+.hide{
+    display: none;
+}
+
+.subtotal-txt{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.whole-cart-window h2{
+    color: #FFF;
+    text-shadow: 3px 2px 2px rgba(70, 70, 70, 0.322);
+    background: linear-gradient(165deg, rgba(255,247,237,1) 0%, rgba(251, 168, 25, 0.777) 65%), url("images/footer/1195098-pattern-photos-honeycomb-free-transparent-image-hd.png"); 
+    background-size: cover;
+    background-position: center;
+    padding: 12px;
+    margin:0;
+    font-size: 1.3em;
+}
+
+.whole-cart-window .cart-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 0px rgba(126, 126, 126, 0.2);
+}
+
+.whole-cart-window .card-img img{
+    height: 120px;
+    width: 90px;
+    margin: 10px;
+}
+
+.whole-cart-window .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.whole-cart-window .buttons button{
+    width: 70%;
+    min-height: 30px;
+    height: 30px;
+}
+
+.whole-cart-window .buttons .gray::after{
+    background-color: initial;
+    background: linear-gradient(92.83deg, #e7e7e7 0, #bcbcbc 100%);
+}
+
+.whole-cart-window .buttons .gray::before{
+    background-color: #cccccc8c;
+}
+
+.buttons button{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.item-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sticky-cart{
+    position: sticky;
+    top:55px;
+}
+
+.xmark-icon{
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.xmark-icon i{
+    color:red;
+    cursor: pointer;
+}
+
+/*****************S I D E   N A V ***********************/
+
+
+
+/***************** R E S P O N S I V E ***********************/
+
+@media(max-width:750px)
+{
+    .nav-search input{
+        width: 120px;
+    }
+}
+
+@media (max-width:664px) {
+    .nav-search input{
+        width: 90px;
+    }
+}
+    
+@media(max-width:550px) {
+    #img .buzzbee-logo{
+        width: 110px;
+        height: 105px;
+    }
+
+    .nav-search {
+        padding-right: 5px;
+    }
+}
+
+@media (max-width:527px){
+    .header-col-icons{
+        gap: 15px;
+    }
+
+    .nav-search input{
+        padding-left: 13px;
+        padding-right: 2px;
+    }
+    
+    .nav-search button{
+        padding-left: 0px;
+        width: 22.6px;
+        padding-right: 2px;
+    } 
+
+    .header-shadow .header-col-menu i{
+        margin-left: 15px;
+    }
+
+    .non-empty::after {
+        right: 55px;
+    }
+    
+    .header-shadow .header-col-icons i:last-of-type{
+        margin-right: 15px;
+    }
+}
+
+
+@media (max-width:415px){
+
+    #header-col-logo .buzzbee-logo{
+        width: 115px;
+        height: 110px;
+    }
+
+    .header-col-icons{
+    height: 15px;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+    }
+
+    .header-col-icons{
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .header-col-icons i{
+        font-size: 20px;
+       height: 20px;
+    }
+
+    .header-col-icons .badge-circle{
+        top:9px;
+        right: 22px;
+        width: 15px;
+    }
+}
+
+@media (max-width:398px) {
+    #header-col-logo .buzzbee-logo{
+        width: 110px;
+        height: 105px;
+    }
+
+    .header-col-icons{
+        padding-left: 90px;
+        margin-left: 90px;
+        margin-right: 0px;
+        }
+
+        .header-i-search .header-col-icons{
+            gap: 10px;
+        }
+}
+
+@media (max-width:281px){
+    .products-container .sidebar{
+        width: 45%;
+    }
+
+    .header-col-icons{
+        padding-left: 90px;
+        margin-left: 80px;
+        margin-right: 0px;
+        }
+
+}
+
+/***************** R E S P O N S I V E ***********************/

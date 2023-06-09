@@ -1,0 +1,216 @@
+.video-bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(165deg,  rgba(39, 22, 1, 0.648) 0%, rgba(66, 45, 9, 0.777) 65% 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-bg:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: linear-gradient(165deg,  rgba(39, 22, 1, 0.648) 0%, rgba(66, 45, 9, 0.777) 65% 65%);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.video-bg video{
+    z-index: 000;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sign-up-form-box{
+    z-index: 888;
+    position: relative;
+    width: 400px;
+    height: 650px;
+    border: 2px solid rgba(255,255,2550.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 30px rgba(255, 248, 225, 0.651);
+}
+
+.sign-up-form-box .input-box{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #ccc;
+}
+
+.sign-up-form-box input{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+ .log-in-form{
+    height: 450px;
+}
+
+input::placeholder{
+    color:#ccc;
+}
+
+
+.user-names{
+    display: flex;
+    justify-content: space-between;
+    align-content:space-between;
+}
+
+.user-names .input-box:first-child, .user-names .input-box:last-child{
+    width: 150px;
+    margin-bottom: 0;
+}
+
+.sign-up-form-box h2{
+    color:#ccc;
+    text-align: center;
+    font-size: 32px;
+}
+
+.sign-up-form-box i{
+    position: absolute;
+    color:#ccc;
+    top:25px;
+    right:0;
+}
+
+#result{
+    color:red;
+    font-weight: 600;
+    position: relative;
+    top:30px;
+    width: 300px;
+    text-align: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button button{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    box-shadow: 3px 0 10px rgba(35, 35, 35, 0.333);
+    border-radius: 50px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.group span a{
+    color:#ccc;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sign-up-txt{
+    justify-content: center;
+}
+
+.group a:hover{
+    display: inline-block;
+    transform: scale(1.07);
+}
+
+.group a:focus{
+    text-decoration: underline;
+}
+
+.popup{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+    z-index: 999;
+    width: 55%;
+    height: 70%;
+    background-color: #dfdede;
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: rgb(57, 56, 56);
+    box-shadow: 3px 0 10px rgba(30, 30, 30, 0.577);
+}
+
+.popup img{
+    position: relative;
+    width: 85px;
+    align-self: center;
+    /*padding: 35px 0 35px 0;*/
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+@media (max-width:767px) {
+
+    .sign-up-form-box{
+        width: 300px;
+        height: 550px;
+    }
+
+    .log-in-form{
+        height: 400px;
+    }
+
+    .sign-up-form-box h2{
+        margin-top: 25px;
+        font-size: 22px;
+    }
+
+    .sign-up-form-box .input-box{
+        width: 260px;
+    }
+
+    .sign-up-txt{
+        margin-bottom: 20px;
+
+    }
+
+    .user-names .input-box:first-child, .user-names .input-box:last-child{
+        width: 120px;
+    }
+
+    .group{
+        margin-bottom: 30px;
+    }
+}
+
+/**********POP UP*************/
+@media (max-width:415px) {
+    .popup{
+        width: 75%;
+        height: 55%;
+    }
+    
+}

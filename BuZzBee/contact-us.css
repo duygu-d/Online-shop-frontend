@@ -1,0 +1,202 @@
+.contact-us-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 5px;
+}
+#cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+.contact-container{
+    padding: 35px 0 0 0;
+    background: -webkit-linear-gradient(rgba(251, 169, 69, 0.773), rgba(176, 86, 7, 0.849)), url("images/homepage/1634276.jpg");
+    background: linear-gradient(rgba(251, 169, 69, 0.773), rgba(176, 86, 7, 0.849)), url("images/homepage/1634276.jpg"); 
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contact-container .icon-container{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.header-txt-color{
+    background: rgb(32,21,3);
+    background: linear-gradient(283deg, rgba(32,21,3,1) 34%, rgb(77, 49, 1) 78%, rgb(122, 87, 10) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 2px 2px rgba(50, 50, 50, 0.299);   
+}
+
+.contact-container .contact-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container .contact-item h3{
+    font-size: 25px;
+    text-shadow: 3px 3px 2px rgba(50, 50, 50, 0.366);
+}
+
+.contact-container .contact-item p{
+    text-align: center;
+    width: 350px;
+    font-weight: 600;
+    font-size: 14px;
+    background: rgb(255,218,52);
+    background: linear-gradient(112deg, rgba(255,218,52,1) 15%, rgba(251,249,246,1) 55%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.icon-container:last-child{
+    font-size: 14px;
+}
+
+.icon-circle{
+    height: 40px;
+    width: 40px;
+}
+
+.contact-us-container .question-form-container h2{
+    padding: 35px 0 25px 0;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.question-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-form-container .input-box input,
+.question-form-container .input-box textarea{
+    width: 550px;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border:none;
+    box-shadow: 1px 1px 5px gray;
+    padding: 0 10px 0 10px;
+
+}
+
+.question-form-container .input-box .question-input{
+    height: 150px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    resize: none;
+}
+
+.question-form-container .input-box .user-names {
+    display: flex;
+    gap: 5px;
+  }
+
+  .question-form-container .input-box .user-names input{
+    width: 265px;
+  }
+  
+
+input::placeholder, textarea::placeholder{
+    padding-left: 10px;
+    text-align: start;
+}
+
+input:focus, textarea:focus{
+   border: none;
+   outline: none;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn button{
+    width: 40%;
+    margin-top: 0;
+}
+
+.pinned-location {
+    width: -webkit-fill-available;
+  }
+  
+.pinned-location iframe{
+    width: -webkit-fill-available;
+   height: 300px;
+   margin: 15px 15px 15px 15px;
+}
+
+@media (max-width:991px) {
+    .contact-container{
+        background-position: center;
+     }
+    .contact-us-container{
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:638px) {
+
+    .question-form-container .input-box input,
+.question-form-container .input-box textarea{
+    width: 400px;
+}
+
+.question-form-container .input-box .user-names input{
+    width: 190px;
+  }
+
+  .contact-us-container .question-form-container h2{
+    text-align: center;
+  }
+
+}
+
+@media (max-width:457px) {
+    .contact-us-container{
+        margin-bottom: 10px;
+    }
+    .contact-us-container .question-form-container h2{
+        font-size: 30px;
+      }
+    .question-form-container .input-box input,
+.question-form-container .input-box textarea{
+    width: 300px;
+}
+
+.question-form-container .input-box #email{
+    margin-left: 10px;
+}
+
+.question-form-container .input-box .user-names input{
+    width: 145px;
+  }
+
+  .contact-container .contact-item p{
+    padding: 10px;
+    width:-webkit-fill-available;
+  }
+
+}
+
+@media (max-width:373px) {
+    .question-form-container .input-box input,
+.question-form-container .input-box textarea{
+    width: 230px;
+}
+
+.question-form-container .input-box .user-names input{
+    width: 110px;
+  }
+
+}

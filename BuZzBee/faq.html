@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | BuZzBee</title>
+    <meta name="description" content="BuZzBee - the place where man and nature come together!">
+    <link rel="stylesheet" href="esentials.css"> 
+    <link rel="stylesheet" href="questions.css"> 
+    <script src="https://kit.fontawesome.com/f816e498cb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script> 
+    <script src="cart-manipulation.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-items-container">
+
+        <div id="header-col-logo">
+                <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+            </div>
+        </div>
+        <div id="shadow" class="header-shadow">
+            <div class="header-col-menu">
+                <i class="fas fa-regular fa-bars" onclick="showSideNav()" id="menu-icon"></i>
+            </div>
+
+            <div class="header-i-search">
+            <div id="header-icons" class="header-col-icons">
+            <i class="fa-solid fa-circle-user" onclick="backToPage('log-in.html')"></i>
+            <i class="fa fa-shopping-basket"></i>
+            <span class="badge-circle"></span>
+        </div>
+    </div>
+        
+        </div>
+    </div>
+    </header>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("shadow");
+
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+}
+</script>
+
+
+<main>
+    <div class="questions-container">
+        <div id="cart" class="whole-cart-window hide">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items-wrapper">
+            <!--<div class="product-card">
+                <div class="cart-container">
+                <div class="card-img">
+                    <img src="images/products/honey/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg" alt="honey product">
+                </div>
+                    <div class="item-details">
+                    <div class="card-title">
+                        <h4 class="header-txt-color">Heather Raw Honey</h4>
+                    </div>
+                        <div class="card-price">
+                            <span class="p-txt-color">13 lv.</span>
+                        </div>
+                        <div class="item-quantity">
+                            <span class="p-txt-color">Quantity: 1</span>
+                        </div>
+                    </div>
+                    <div class="xmark-icon">
+                        <i class="fa-solid fa-xmark fa-sm"></i>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+            <div class="subtotal-txt">
+                <span class="p-txt-color"></span>
+            </div>
+
+            <div class="buttons">
+                <button class="product-categories-btn">Checkout</button>
+                <button class="product-categories-btn gray" id="shopping-cart-view-btn">View cart</button>
+            </div>
+        </div>
+        <aside class="sidebar" id="sidenav">
+            <div class="header-container">
+                <h3>Menu</h3>
+              <i class="fa-solid fa-xmark fa-lg" onclick="hideSideNav()"></i>
+            </div>
+    
+            <div class="menu">
+            <a href="BuZzBee-Homepage.html" class="menu-item"><i class="fa-solid fa-house fa-sm"></i> Home</a>
+            <a href="#" class="menu-item"  onclick="toggleSublist()"><i class="fa-solid fa-jar fa-sm"></i> Products <i class="fa-solid fa-angle-down fa-xs" id="up-down"></i></a>
+                <ul class="sublist-hide" id="productsSublist">
+                    <li><a class="menu-item" href="products-honey.html">Honey</a></li>
+                    <li><a class="menu-item" href="products-cosmetics.html">Cosmetics</a></li>
+                    <li><a class="menu-item" href="products-giftboxes.html">Gift Boxes</a></li>
+                 </ul>
+            <a href="shipping-payment.html" class="menu-item"><i class="fa-solid fa-truck-fast fa-sm"></i> Shipping & Payment</a>
+            <a href="faq.html" class="menu-item"><i class="fa-solid fa-circle-question fa-sm"></i> FAQ</a>
+            <a href="about-us.html" class="menu-item"><i class="fa-solid fa-circle-info fa-sm"></i> About Us</a>
+            <a href="contact-us.html" class="menu-item"><i class="fa-solid fa-phone-volume fa-sm"></i> Contact Us</a>
+        </div>
+    </aside>
+    <h2 class="fancy-text">Frequently Asked Questions</h2>
+
+    <div class="questions">
+        <ul id="accordion">
+            <li>
+                <label for="first">Q: Where do you source your organic raw honey from?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="first" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> We source our organic raw honey from our own beekeeping farms, where 
+                        we maintain a natural and sustainable environment for our bees. This allows
+                         us to ensure the quality and purity of our honey.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="second">Q: Are your honey cosmetics suitable for all skin types?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="second" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Our honey cosmetics are formulated to be gentle and suitable for a wide range of skin types. Whether you have dry, oily, or 
+                        sensitive skin, our products are designed to nourish and enhance your skin's natural beauty.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="third">Q: Can I customize the contents of the gift boxes?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="third" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Absolutely! We understand the importance of personalization. We offer the option to customize gift boxes with a selection 
+                        of your preferred honey cosmetics and other honey-related products. Simply reach out to our customer service team, and they will be happy to assist you in creating the perfect gift box.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="fourth">Q: Are your products suitable for sensitive skin?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="fourth" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Yes, our honey cosmetics are formulated to be gentle on the skin and suitable for sensitive skin types. However, we recommend checking
+                         the ingredient list to ensure compatibility with any known allergies or sensitivities.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="fifth">Q: How can I ensure the quality of your products?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="fifth" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> We take pride in maintaining the highest standards of quality. Our products undergo rigorous testing and meet strict quality 
+                        control measures. Additionally, we source our honey from our own beekeeping farms to ensure traceability and freshness.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="sixth">Q: What is the shelf life of your honey products?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="sixth" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Our honey products have a long shelf life. Raw honey can typically last for several years if stored properly in a cool
+                         and dry place. However, for the best flavor and quality, we recommend consuming them within 1-2 years.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="seventh">Q: Are your products cruelty-free?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="seventh" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Yes, we are committed to cruelty-free practices. Our products are not tested on animals, and we prioritize 
+                        ethical sourcing and production methods.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="eighth">Q: Are your packaging materials eco-friendly?<span><i class="fa-solid fa-angle-down fa-sm"></i></span></label>
+                <input type="radio" name="accordion" id="eighth" onclick="setChecked(this)">
+                <div class="content">
+                    <p class="p-txt-color">
+                        <b>A:</b> Yes, we are conscious of our environmental impact. We use eco-friendly packaging materials whenever possible,
+                         such as recyclable or biodegradable containers and shipping materials.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+</main>
+
+    <footer>
+        <div class="footer-row">
+         <div id="img" class="footer-col">
+            <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+         </div>
+         <div class="footer-col">
+             <h3>Working time</h3>
+             <p>Monday - Saturday</p>
+             <p>08:00 - 21:00</p>
+             <p class="email-id">buzzbee@gmail.com</p>
+             <h4>0880000000</h4>
+         </div>
+         <div class="footer-col">
+             <h3>Visit</h3>
+             <ul>
+                 <li><a href="shipping-payment.html">Shipping & Payment</a></li>
+                 <li><a href="faq.html">FAQ</a></li>
+                 <li><a href="contact-us.html">Contact Us</a></li>
+                 <li><a href="about-us.html">About Us</a></li>
+             </ul>
+         </div>
+         <div class="footer-col">
+             <h3>Newsletter</h3>
+             <form class="newsletter-form">
+             <i class="fa-regular fa-envelope"></i>
+             <input type="email" placeholder="Enter your email to subscribe" required>
+             <button type="submit"><i class="fas fa-arrow-right"></i></button>
+         </form>
+         <div class="social-icons">
+             <i class="fa-brands fa-facebook-f"></i>
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-viber"></i>
+         </div>
+         </div>
+        </div>
+        <hr>
+        <p class="copyright">Duran's farms © 2023 - All Rights Reserved</p>
+     </footer>
+     <script>
+        function setChecked(input) {
+            if(input.checked){
+                input.checked = false;
+            }
+          input.checked = true;
+        }
+      </script>
+      
+</body>
+</html>

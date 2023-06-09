@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Registration | BuZzBee</title>
+    <link rel="stylesheet" href="esentials.css">
+    <link rel="stylesheet" href="sign-up-styles.css">
+    <script src="https://kit.fontawesome.com/f816e498cb.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+</head>
+<body>
+    <main>
+        <div class="video-bg">
+            <video class="video-slider" src="images/sign-up/pexels-anete-lusina-5241075-3840x2160-60fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-diego-escobedo-lozano-8087834-3840x2160-60fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-frank-cone-4682200-1920x1080-25fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-frank-meriño-8405982-1920x1080-30fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-joshua-6792648-1920x1080-24fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-roman-odintsov-8841378-4096x2160-30fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-roman-odintsov-8841382-4096x2160-30fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-yaroslav-bilgovskiy-9491522-1920x1080-50fps.mp4" autoplay muted loop></video>
+            <video class="video-slider" src="images/sign-up/pexels-joshua-6792650-1920x1080-24fps.mp4" autoplay muted loop></video>
+            <div class="popup" id="popup">
+                <h2>Thank you for your registration</h2>
+                <img src="images/sign-up/2592235.png" alt="successfully registration icon">
+                <p>You have successfully registered! Please check your email to confirm the registration.</p>
+                <div class="btn">
+                <button type="submit" class="product-categories-btn">Confirm</button>
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("video-slider");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 7999); // Change image every 2 seconds
+}
+</script>

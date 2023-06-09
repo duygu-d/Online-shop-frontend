@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BuZzBee</title>
+    <meta name="description" content="BuZzBee - the place where man and nature come together!">
+    <link rel="stylesheet" href="esentials.css"> 
+    <link rel="stylesheet" href="about-us-styles.css"> 
+    <script src="https://kit.fontawesome.com/f816e498cb.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+    <script src="cart-manipulation.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-items-container">
+
+        <div id="header-col-logo">
+                <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+            </div>
+        </div>
+        <div id="shadow" class="header-shadow">
+            <div class="header-col-menu">
+                <i class="fas fa-regular fa-bars" onclick="showSideNav()" id="menu-icon"></i>
+            </div>
+
+            <div class="header-i-search">
+            <div id="header-icons" class="header-col-icons">
+            <i class="fa-solid fa-circle-user" onclick="backToPage('log-in.html')"></i>
+            <i class="fa fa-shopping-basket"></i>
+            <span class="badge-circle"></span>
+        </div>
+    </div>
+        
+        </div>
+    </div>
+    </header>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the header
+        var header = document.getElementById("shadow");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+}
+</script>
+
+    <main>
+        <div class="container">
+            <div id="cart" class="whole-cart-window hide">
+                <h2>Shopping Cart</h2>
+                <div class="cart-items-wrapper">
+                <!--<div class="product-card">
+                    <div class="cart-container">
+                    <div class="card-img">
+                        <img src="images/products/honey/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg" alt="honey product">
+                    </div>
+                        <div class="item-details">
+                        <div class="card-title">
+                            <h4 class="header-txt-color">Heather Raw Honey</h4>
+                        </div>
+                            <div class="card-price">
+                                <span class="p-txt-color">13 lv.</span>
+                            </div>
+                            <div class="item-quantity">
+                                <span class="p-txt-color">Quantity: 1</span>
+                            </div>
+                        </div>
+                        <div class="xmark-icon">
+                            <i class="fa-solid fa-xmark fa-sm"></i>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+                <div class="subtotal-txt">
+                    <span class="p-txt-color"></span>
+                </div>
+    
+                <div class="buttons">
+                    <button class="product-categories-btn">Checkout</button>
+                    <button class="product-categories-btn gray" id="shopping-cart-view-btn">View cart</button>
+                </div>
+            </div>
+            <aside class="sidebar" id="sidenav">
+                <div class="header-container">
+                    <h3>Menu</h3>
+                  <i class="fa-solid fa-xmark fa-lg" onclick="hideSideNav()"></i>
+                </div>
+        
+                <div class="menu">
+                <a href="BuZzBee-Homepage.html" class="menu-item"><i class="fa-solid fa-house fa-sm"></i> Home</a>
+                <a href="#" class="menu-item"  onclick="toggleSublist()"><i class="fa-solid fa-jar fa-sm"></i> Products <i class="fa-solid fa-angle-down fa-xs" id="up-down"></i></a>
+                    <ul class="sublist-hide" id="productsSublist">
+                        <li><a class="menu-item" href="products-honey.html">Honey</a></li>
+                        <li><a class="menu-item" href="products-cosmetics.html">Cosmetics</a></li>
+                        <li><a class="menu-item" href="products-giftboxes.html">Gift Boxes</a></li>
+                     </ul>
+                <a href="shipping-payment.html" class="menu-item"><i class="fa-solid fa-truck-fast fa-sm"></i> Shipping & Payment</a>
+                <a href="faq.html" class="menu-item"><i class="fa-solid fa-circle-question fa-sm"></i> FAQ</a>
+                <a href="about-us.html" class="menu-item"><i class="fa-solid fa-circle-info fa-sm"></i> About Us</a>
+                <a href="contact-us.html" class="menu-item"><i class="fa-solid fa-phone-volume fa-sm"></i> Contact Us</a>
+            </div>
+        </aside>
+        <div class="welcome-txt">
+            <h1 class="fancy-text">
+                We are BuZzBee <img src="images/logo/bees.png" alt="">
+            </h1>
+            <p>
+                At BuZzBee, our family crafts nature's finest offerings, 
+                creating sustainable and organic products that spark a buzzing 
+                connection between humans and the hive.
+            </p>
+            <img src="images/logo/bee-icon-honey.png" alt="">
+        </div>
+        <div class="wave-wrapper">
+            <h1 class="txt-shadow">Our<br> history</h1>
+            <div class="wave-top">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="history-txt-container txt-shadow">
+            <p>
+                We are big buzzing family working hand in hand with nature. Our passion for beekeeping has blossomed into a thriving legacy. 
+                Since our humble beginnings in 1996, we have embarked on an extraordinary journey as beekeepers, nurturing and caring for these fascinating creatures that bring us nature's bounties. 
+                Guided by unwavering dedication to sustainability, quality, and the remarkable offerings that bees provide,
+                 we have transformed our initial two beehives into a flourishing family business.
+            </p>            
+        </div>
+            <div class="wave-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="values">
+            <div class="divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+            <h2 class="fancy-text">Our values</h2>
+            <div class="values-container">
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-solid fa-seedling fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Biological and Organic
+                </h3>
+                <p class="p-txt-color">
+                    We create gentle and eco-friendly bio products by prioritizing organic and natural ingredients, 
+                    free from harmful chemicals, that are gentle on both your skin and the environment.
+                </p>
+
+            </div>
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Sustainability
+                </h3>
+                <p class="p-txt-color">
+                    We prioritize responsible beekeeping techniques, eco-friendly packaging, 
+                    and minimizing our environmental impact to promote the well-being of our planet.
+                </p>
+            </div>
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-solid fa-star fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Premium Quality
+                </h3>
+                <p class="p-txt-color">
+                    We source the finest ingredients and maintain rigorous quality 
+                    control measures to deliver products of unparalleled excellence, ensuring your utmost satisfaction with every purchase.
+                </p>
+            </div>
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-solid fa-people-roof fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Tradition
+                </h3>
+                <p class="p-txt-color">
+                    Tradition is the heart of our family business, as we honor and preserve our legacy across
+                     generations, drawing upon cherished knowledge, techniques, and a deep appreciation for bees, 
+                     creating a strong foundation that inspires our work and keeps us connected to our roots.
+                </p>
+                </p>
+            </div>
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-regular fa-handshake fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Transparency
+                </h3>
+                <p class="p-txt-color">
+                    We believe in transparency and open communication with our customers. We provide complete
+                     transparency about the sourcing, production, and processes involved in creating our products, 
+                     ensuring trust and confidence in what we offer.
+                </p>
+            </div>
+            <div class="value-i-txt">
+                <div class="icon-circle">
+                <i class="fa-solid fa-scale-balanced fa-2xl"></i>
+            </div>
+                <h3 class="header-txt-color">
+                    Ethics
+                </h3>
+                <p class="p-txt-color">
+                    Ethics guide our beekeeping practices as we prioritize the well-being of our bees, providing
+                     natural habitats, free from harmful substances, and nurturing them with love and compassion to 
+                     ensure their happiness and the integrity of our products.
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-row">
+         <div id="img" class="footer-col">
+            <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+         </div>
+         <div class="footer-col">
+             <h3>Working time</h3>
+             <p>Monday - Saturday</p>
+             <p>08:00 - 21:00</p>
+             <p class="email-id">buzzbee@gmail.com</p>
+             <h4>0880000000</h4>
+         </div>
+         <div class="footer-col">
+             <h3>Visit</h3>
+             <ul>
+                 <li><a href="shipping-payment.html">Shipping & Payment</a></li>
+                 <li><a href="faq.html">FAQ</a></li>
+                 <li><a href="contact-us.html">Contact Us</a></li>
+                 <li><a href="about-us.html">About Us</a></li>
+             </ul>
+         </div>
+         <div class="footer-col">
+             <h3>Newsletter</h3>
+             <form class="newsletter-form">
+             <i class="fa-regular fa-envelope"></i>
+             <input type="email" placeholder="Enter your email to subscribe" required>
+             <button type="submit"><i class="fas fa-arrow-right"></i></button>
+         </form>
+         <div class="social-icons">
+             <i class="fa-brands fa-facebook-f"></i>
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-viber"></i>
+         </div>
+         </div>
+        </div>
+        <hr>
+        <p class="copyright">Duran's farms © 2023 - All Rights Reserved</p>
+     </footer>
+</body>
+</html>

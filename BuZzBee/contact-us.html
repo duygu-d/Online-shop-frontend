@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BuZzBee</title>
+    <meta name="description" content="BuZzBee - the place where man and nature come together!">
+    <link rel="stylesheet" href="esentials.css">    
+    <link rel="stylesheet" href="contact-us.css">
+    <script src="https://kit.fontawesome.com/d521bfd57a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+    <script src="cart-manipulation.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-items-container">
+
+        <div id="header-col-logo">
+                <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+            </div>
+        </div>
+        <div id="shadow" class="header-shadow">
+            <div class="header-col-menu">
+                <i class="fas fa-regular fa-bars" onclick="showSideNav()" id="menu-icon"></i>
+            </div>
+
+            <div class="header-i-search">
+            <div id="header-icons" class="header-col-icons">
+            <i class="fa-solid fa-circle-user" onclick="backToPage('log-in.html')"></i>
+            <i class="fa fa-shopping-basket"></i>
+            <span class="badge-circle"></span>
+        </div>
+    </div>
+        
+        </div>
+    </div>
+    </header>
+
+    <script>
+         // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the header
+        var header = document.getElementById("shadow");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
+
+    <main>
+        <div class="contact-us-container">
+            <div id="cart" class="whole-cart-window hide">
+                <h2>Shopping Cart</h2>
+                <div class="cart-items-wrapper">
+                <!--<div class="product-card">
+                    <div class="cart-container">
+                    <div class="card-img">
+                        <img src="images/products/honey/3_2529_Original_1lb_Honey_Jar_with_Gold_Screw_Lid_2d6d4f.jpg" alt="honey product">
+                    </div>
+                        <div class="item-details">
+                        <div class="card-title">
+                            <h4 class="header-txt-color">Heather Raw Honey</h4>
+                        </div>
+                            <div class="card-price">
+                                <span class="p-txt-color">13 lv.</span>
+                            </div>
+                            <div class="item-quantity">
+                                <span class="p-txt-color">Quantity: 1</span>
+                            </div>
+                        </div>
+                        <div class="xmark-icon">
+                            <i class="fa-solid fa-xmark fa-sm"></i>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+                <div class="subtotal-txt">
+                    <span class="p-txt-color"></span>
+                </div>
+    
+                <div class="buttons">
+                    <button class="product-categories-btn">Checkout</button>
+                    <button class="product-categories-btn gray" id="shopping-cart-view-btn">View cart</button>
+                </div>
+            </div>
+        
+            <aside class="sidebar" id="sidenav">
+                <div class="header-container">
+                    <h3>Menu</h3>
+                  <i class="fa-solid fa-xmark fa-lg" onclick="hideSideNav()"></i>
+                </div>
+        
+                <div class="menu">
+                <a href="BuZzBee-Homepage.html" class="menu-item"><i class="fa-solid fa-house fa-sm"></i> Home</a>
+                <a href="#" class="menu-item"  onclick="toggleSublist()"><i class="fa-solid fa-jar fa-sm"></i> Products <i class="fa-solid fa-angle-down fa-xs" id="up-down"></i></a>
+                    <ul class="sublist-hide" id="productsSublist">
+                        <li><a class="menu-item" href="products-honey.html">Honey</a></li>
+                        <li><a class="menu-item" href="products-cosmetics.html">Cosmetics</a></li>
+                        <li><a class="menu-item" href="products-giftboxes.html">Gift Boxes</a></li>
+                     </ul>
+                     <a href="shipping-payment.html" class="menu-item"><i class="fa-solid fa-truck-fast fa-sm"></i> Shipping & Payment</a>
+                <a href="faq.html" class="menu-item"><i class="fa-solid fa-circle-question fa-sm"></i> FAQ</a>
+                <a href="about-us.html" class="menu-item"><i class="fa-solid fa-circle-info fa-sm"></i> About Us</a>
+                <a href="contact-us.html" class="menu-item"><i class="fa-solid fa-phone-volume fa-sm"></i> Contact Us</a>
+            </div>
+        </aside>
+            <div class="question-form-container">
+                <form action="" name="FormFill" onsubmit="return formValidation()">
+                    <h2 class="header-txt-color">Contact us</h2>
+                    <div class="input-box">
+                        <div class="user-names">
+                            <div class="input-box">
+                                <input type="text" name="FirstName" placeholder="First name" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="LastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" name="Email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea class="question-input" name="Question" placeholder="Write your question here..." required></textarea>
+                    </div>
+                    <div class="btn">
+                    <button type="submit" class="product-categories-btn">Submit</button>
+                </div>
+                </form>
+                <div class="pinned-location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.841249652846!2d23.315736315466587!3d42.68590497916633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa851045e62c3f%3A0x75c66d6bd9bbbc0b!2z0LHRg9C7LiDigJ7QktC40YLQvtGI0LDigJwsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1685642846462!5m2!1sbg!2sbg" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <h3 class="header-txt-color">Working time</h3>
+                    <p class="p-txt-color">Discover our family beekeepers store, open Monday to Saturday from 08:00 to 21:00,
+                     and indulge in the finest bio honey, natural cosmetics, and bee-inspired delights.</p>
+                     <div class="icon-container">
+                     <div class="icon-circle">
+                     <i class="fa-solid fa-business-time fa-lg"></i>
+                    </div>
+                     <h4 class="header-txt-color">Monday - Saturday from 08:00 - 21:00</h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="contact-item">
+                    <h3 class="header-txt-color">Call us</h3>
+                    <p class="p-txt-color">We're here for you! Our dedicated team is ready to assist and provide
+                     a smooth shopping experience, just a phone call away.</p>
+                     <div class="icon-container">
+                     <div class="icon-circle">
+                     <i class="fa-solid fa-phone-volume fa-lg"></i>
+                    </div>
+                     <h4 class="header-txt-color">0880000000</h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="contact-item">
+                    <h3 class="header-txt-color">Visit us</h3>
+                    <p class="p-txt-color">Experience the sweet essence of nature by visiting our family beekeepers 
+                        store, where you can explore a delightful array of bio honey, natural cosmetics, and other bee-inspired
+                         products.</p>
+                         <div class="icon-container">
+                         <div class="icon-circle">
+                         <i class="fa-solid fa-location-dot fa-lg"></i>
+                        </div>
+                     <h4 class="header-txt-color">bul. "Vitosha", Sofia, Bulgaria</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-row">
+         <div id="img" class="footer-col">
+            <img src="images/logo/buzzbee-logo.png" alt="BuZzBee logo" class="buzzbee-logo" onclick="backToPage('BuZzBee-Homepage.html')">
+         </div>
+         <div class="footer-col">
+             <h3>Working time</h3>
+             <p>Monday - Saturday</p>
+             <p>08:00 - 21:00</p>
+             <p class="email-id">buzzbee@gmail.com</p>
+             <h4>0880000000</h4>
+         </div>
+         <div class="footer-col">
+             <h3>Visit</h3>
+             <ul>
+                 <li><a href="shipping-payment.html">Shipping & Payment</a></li>
+                 <li><a href="faq.html">FAQ</a></li>
+                 <li><a href="contact-us.html">Contact Us</a></li>
+                 <li><a href="about-us.html">About Us</a></li>
+             </ul>
+         </div>
+         <div class="footer-col">
+             <h3>Newsletter</h3>
+             <form class="newsletter-form">
+             <i class="fa-regular fa-envelope"></i>
+             <input type="email" placeholder="Enter your email to subscribe" required>
+             <button type="submit"><i class="fas fa-arrow-right"></i></button>
+         </form>
+         <div class="social-icons">
+             <i class="fa-brands fa-facebook-f"></i>
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-viber"></i>
+         </div>
+         </div>
+        </div>
+        <hr>
+        <p class="copyright">Duran's farms © 2023 - All Rights Reserved</p>
+     </footer>
+</body>
+</html>
